@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Newtab-Ux-Ui/static/css/main.a4ed7003.chunk.css",
+    "main.js": "/Newtab-Ux-Ui/static/js/main.e3f720bb.chunk.js",
+    "main.js.map": "/Newtab-Ux-Ui/static/js/main.e3f720bb.chunk.js.map",
+    "runtime-main.js": "/Newtab-Ux-Ui/static/js/runtime-main.372afa67.js",
+    "runtime-main.js.map": "/Newtab-Ux-Ui/static/js/runtime-main.372afa67.js.map",
+    "static/js/2.50c414a1.chunk.js": "/Newtab-Ux-Ui/static/js/2.50c414a1.chunk.js",
+    "static/js/2.50c414a1.chunk.js.map": "/Newtab-Ux-Ui/static/js/2.50c414a1.chunk.js.map",
+    "index.html": "/Newtab-Ux-Ui/index.html",
+    "precache-manifest.b13a203d8c55db3a219ada9e006bab87.js": "/Newtab-Ux-Ui/precache-manifest.b13a203d8c55db3a219ada9e006bab87.js",
+    "service-worker.js": "/Newtab-Ux-Ui/service-worker.js",
+    "static/css/main.a4ed7003.chunk.css.map": "/Newtab-Ux-Ui/static/css/main.a4ed7003.chunk.css.map",
+    "static/js/2.50c414a1.chunk.js.LICENSE.txt": "/Newtab-Ux-Ui/static/js/2.50c414a1.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.372afa67.js",
+    "static/js/2.50c414a1.chunk.js",
+    "static/css/main.a4ed7003.chunk.css",
+    "static/js/main.e3f720bb.chunk.js"
+  ]
+}
