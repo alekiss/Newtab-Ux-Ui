@@ -84,9 +84,11 @@ const valorInput = (event) => {
         <div className="header">
             <div className="alinhamento">
                 <img className="logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0xMS41IC0xMC4yMzE3NCAyMyAyMC40NjM0OCI+CiAgPHRpdGxlPlJlYWN0IExvZ288L3RpdGxlPgogIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIyLjA1IiBmaWxsPSIjNjFkYWZiIi8+CiAgPGcgc3Ryb2tlPSIjNjFkYWZiIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIi8+CiAgICA8ZWxsaXBzZSByeD0iMTEiIHJ5PSI0LjIiIHRyYW5zZm9ybT0icm90YXRlKDYwKSIvPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIiB0cmFuc2Zvcm09InJvdGF0ZSgxMjApIi8+CiAgPC9nPgo8L3N2Zz4K" height="20"/>
-                <strong className="title">REACT APP</strong>
+                <strong className="title" data-testid="header-title">REACT APP</strong>
             </div>
         </div>
+            <section data-testid="section">
+
             {infos.map(item => (
                 <div className="container" key={item.index}>
                     <div className="content">
@@ -124,6 +126,8 @@ const valorInput = (event) => {
                 <p>O Pagamento <b>{abrirNaoRecebeu}</b> foi concluído com sucesso.</p>
                 <button onClick={()=>{fecharModal()}}>Fechar</button>
             </div>
+
+            </section>
         </>
     )
 }

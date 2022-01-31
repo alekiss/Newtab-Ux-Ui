@@ -1,6 +1,6 @@
 {
   "name": "meu-primeiro-app",
-  "homepage": "https://github.com/alekiss/Newtab-Ux-Ui.git",
+  "homepage": "https://alekiss.github.io/Newtab-Ux-Ui/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -20,10 +20,12 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --env=jest-environment-jsdom-sixteen",
+    "test:cov": "react-scripts test --env=jest-environment-jsdom-sixteen --coverage",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
+
   },
   "eslintConfig": {
     "extends": [
@@ -42,5 +44,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@testing-library/dom": "^8.11.3",
+    "jest-environment-jsdom-sixteen": "^2.0.0"
   }
 }
