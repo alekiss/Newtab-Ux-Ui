@@ -97,7 +97,7 @@ const valorInput = (event) => {
             <section data-testid="section">
 
             {infos.map(item => (
-                <div className="container" key={item.index}>
+                <div className="container" key={item.index} data-testid="custom-element">
                     <div className="content">
                         <img className="thumbnail" src={item.img} alt="Foto do usuário" />
                         
@@ -118,7 +118,7 @@ const valorInput = (event) => {
             ))}
 
             {/*--------------------------------Abrir Modal de pagamento----------------------------------*/}
-            <div className="abrirModal" style={{display: abrirPagamento}}>
+            <div className="abrirModal" style={{display: abrirPagamento}} data-testid="abrirModal">
                 <div className="texto-cabecalho-modal">
                     <p>Pagamento para <span>{pegarUsuario}</span></p>
                     <button className="" onClick={()=>{closeModal()}}>X</button>
@@ -136,7 +136,7 @@ const valorInput = (event) => {
             </div>  
 
             {/*------------------------------Abrir Modal de recibo de pagamento--------------------------------*/}
-            <div className="abrirModal" style={{display: abrirPagou}}>
+            <div className="abrirModal" style={{display: abrirPagou}} data-testid="modalPagamento">
                 <p className="texto-cabecalho-modal">Recibo de pagamento</p>
                 <div className="texto-corpo-modal">
                     <p>O Pagamento <b>{abrirNaoRecebeu}</b> foi concluído com sucesso.</p>
