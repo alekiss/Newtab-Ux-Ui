@@ -2,6 +2,9 @@ import React, { useEffect, useState } from 'react';
 import NumberFormat from 'react-number-format';
 import './listadeusuarios.css';
 import axios from 'axios';
+import logo from './assets/logo.png'
+import user from './assets/user.png'
+import email from './assets/email.png'
 //import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 //Pegando as informações da API pelo GET
@@ -72,6 +75,10 @@ const fecharModal = () => {
     setAbrirPagou("none");
 }
 
+const closeModal = () => {
+    setAbrirPagamento("none");
+}
+
 // Função para validar campo de valor para pagamento do usuário
 const valorInput = (event) => {
     setValorDinheiro(event.target.value);
@@ -83,8 +90,8 @@ const valorInput = (event) => {
         <>
         <div className="header">
             <div className="alinhamento">
-                <img className="logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0xMS41IC0xMC4yMzE3NCAyMyAyMC40NjM0OCI+CiAgPHRpdGxlPlJlYWN0IExvZ288L3RpdGxlPgogIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIyLjA1IiBmaWxsPSIjNjFkYWZiIi8+CiAgPGcgc3Ryb2tlPSIjNjFkYWZiIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIi8+CiAgICA8ZWxsaXBzZSByeD0iMTEiIHJ5PSI0LjIiIHRyYW5zZm9ybT0icm90YXRlKDYwKSIvPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIiB0cmFuc2Zvcm09InJvdGF0ZSgxMjApIi8+CiAgPC9nPgo8L3N2Zz4K" height="20"/>
-                <strong className="title" data-testid="header-title">REACT APP</strong>
+                <img className="logo" src={logo} height="20"/>
+                <strong className="title" data-testid="header-title">PAY CARD</strong>
             </div>
         </div>
             <section data-testid="section">
@@ -93,21 +100,29 @@ const valorInput = (event) => {
                 <div className="container" key={item.index}>
                     <div className="content">
                         <img className="thumbnail" src={item.img} alt="Foto do usuário" />
-                        <div className="infos">   
-                            <p className="width"><strong>{item.name}</strong></p>
-                            <p><strong>{item.username}</strong></p>
-                            <p><strong>ID: {item.id}</strong></p>
+                        
+                        <div className="infos">
+                            <div className="userDiv">
+                                <img src={user} width="30px" />
+                                <p className="width"><strong>{item.name}</strong></p>
+                            </div>
+                            <div className="userDiv">
+                                <img src={email} width="30px" />
+                                <p><strong>{item.username}</strong></p>
+                            </div>
                         </div>
-                        <button className="botao-pagar" onClick={()=>{abrirModalPagar(item.name)}}>Pagar
-                         
-                        </button>
+                        
+                        <button alt="Pagar" onClick={()=>{abrirModalPagar(item.name)}}>Pagar</button>
                     </div>
                 </div>
             ))}
 
             {/*--------------------------------Abrir Modal de pagamento----------------------------------*/}
             <div className="abrirModal" style={{display: abrirPagamento}}>
-                <p className="texto-cabecalho-modal">Pagamento para <span>{pegarUsuario}</span></p>
+                <div className="texto-cabecalho-modal">
+                    <p>Pagamento para <span>{pegarUsuario}</span></p>
+                    <button className="" onClick={()=>{closeModal()}}>X</button>
+                </div>
                 <div className="valorInput">
                 <NumberFormat thousandSeparator={true} className="input" value={valorDinheiro} onChange={valorInput} prefix={'R$ '} inputmode="numeric" placeholder="R$ 0,00"/>
                 <p style={{display:validarCampo}}>Campo obrigatório</p>
@@ -123,8 +138,10 @@ const valorInput = (event) => {
             {/*------------------------------Abrir Modal de recibo de pagamento--------------------------------*/}
             <div className="abrirModal" style={{display: abrirPagou}}>
                 <p className="texto-cabecalho-modal">Recibo de pagamento</p>
-                <p>O Pagamento <b>{abrirNaoRecebeu}</b> foi concluído com sucesso.</p>
-                <button onClick={()=>{fecharModal()}}>Fechar</button>
+                <div className="texto-corpo-modal">
+                    <p>O Pagamento <b>{abrirNaoRecebeu}</b> foi concluído com sucesso.</p>
+                </div>
+                <button classname="abrirModalButton" onClick={()=>{fecharModal()}}>Fechar</button>
             </div>
 
             </section>

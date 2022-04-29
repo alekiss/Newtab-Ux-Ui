@@ -6,11 +6,12 @@ body {
     padding: 0;
     width: 100%;
     margin-top: 75px;
-    background: #32363E;
+    background-image: url(./assets/background.jpg);
+    /* background-image: linear-gradient( white, black) */
 }
 
 .header {
-    background-color: #20232A;
+    background-color: #EC0000;
     width: 100%;
     height:64px;
     position: fixed;
@@ -21,68 +22,71 @@ body {
 
 .title{
     margin-left: 5px;
-    color: #61DAFB;
+    color: white;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
     font-size: 1.25rem;
 }
 
 .logo{
-    width: 1.25em;
-    height: 1.25em;
+    width: 2em;
+    height: 2em;
 }
 
 .alinhamento {
     display: flex;
-    align-items: center;
     justify-content: center;
     padding: 19px;
 }
 
 .container {
-    background-color: white;
+    background-color: #EC0000;
     display: flex;
     justify-content: center;
+    margin: auto;
     margin-top: 0.6rem;
     align-items: center;
     padding: 1.25rem;
-    width: 45%;
+    width: 700px;
+    max-width: 700px;
     height: 200px;
     border-radius: 5px 0px;
     box-shadow: 3px 0 6px rgba(0, 0, 0, 0.54);
-    margin-left: 25%;
-
 }
 
 .content {
-    max-width: 800px;
-    margin: 0 auto;
+    width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    padding: auto;
 }
 
 .thumbnail {
     border-radius: 50%;
-    margin-right: 5.25rem;
-    box-shadow: 3px 0 6px rgba(0, 0, 0, 0.54);
-}
-
-.infos {
-    margin-right: 4.25rem;
-    width: 200px;
+    box-shadow: 3px 3px 6px white;
 }
 
 .infos p {
     font-size: 18px;
-    color:#32363E;
+    color: white;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
     font-size: 1.1rem;
 }
 
+.userDiv {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.userDiv img {
+    height:30px;
+    width: 30px;
+    margin-right: 15px;
+}
+
 .width {
     text-transform: uppercase;
-    color: black !important;
+    color: white !important;
     font-size: 1.25rem !important;
 }
 
@@ -90,10 +94,12 @@ button {
     padding: 0.55rem 0.838rem;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
     font-size: 15px;
-    color: #61DAFB;
-    background-color: #20232A;
+    color: #EC0000;
+    background-color: white;
     font-weight: bold;
-    border-radius: 5px 0;
+    border-radius: 3px 0;
+    cursor: pointer;
+    border: none;
 }
 
 /* CSS dos Modals */
@@ -110,7 +116,7 @@ button {
     width: 410px;
     height: 290px;
     flex-direction: column;
-    background-color: #32363E;
+    background-color: white;
     justify-content: space-between;
     align-items: center;
     border-radius: 5px 0;
@@ -119,9 +125,12 @@ button {
 }
 
 .texto-cabecalho-modal {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-    background-color: #20232A;
-    color: #FFFFFF;
+    background-color: #EC0000;
+    color: #EC0000;
     padding: 10px;
     width: 95.4%;
     margin-top: 0%;
@@ -130,21 +139,36 @@ button {
 }
 
 .texto-cabecalho-modal span {
-    color: #61DAFB;
+    color: white;
     font-weight: bold;
+}
+
+.texto-corpo-modal p {
+    color: #EC0000 !important;
+    font-weight: bold;
+}
+
+.texto-cabecalho-modal button {
+    background-color: white;
+    color: #EC0000;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    padding: 0;
+    border-radius: 0;
+    margin-bottom: 0 !important;
 }
 
 .abrirModal select {
     width: 68%;
     height: 3.25rem;
     border-radius: 5px 0;
-    background-color: #32363E;
-    color:#61DAFB;
+    background-color: white;
     font-size: 1rem;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 }
 
-.abrirModal button {
+.abrirModalButton {
     width: 20%;
     margin-bottom: 10px;
 }
@@ -153,7 +177,12 @@ button {
     font-size: 1rem;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
     text-align: center;
-    color:#61DAFB;
+    color: white;
+}
+
+.abrirModal button {
+    margin-bottom: 20px;
+    border: 1px solid #EC0000 !important;
 }
 
 .valorInput {
@@ -166,7 +195,7 @@ button {
 
 .valorInput p {
     margin: 0;
-    color: red;
+    color: #EC0000;
     font-weight: bold;
     margin-top: 2%;
 }
@@ -175,17 +204,31 @@ button {
     width: 66%;
     height: 3rem;
     border-radius: 5px 0;
-    background-color: #32363E;
-    color:#61DAFB;
+    background-color: white;
+    color: #EC0000;
     font-size: 1rem;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 }
 
 /* Media Queries */
 
-@media screen and (max-width: 412px) and (min-width: 391px) {
+@media screen and (max-width: 768px){
+    .container{
+        max-width: 580px;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .container{
+        max-width: 501px;
+    }
+
+    .width {
+        font-size: 14px !important;
+    }
+
     .thumbnail {
-        width: 75px;
+        width: 110px;
     }
 
     .infos p {
@@ -193,17 +236,36 @@ button {
     }
 }
 
-@media screen and (max-width: 390px) and (min-width: 376px) {
+
+@media screen and (max-width: 415px){
+    .container {
+        max-width: 320px;
+        height: 150px;
+    }
+
+    .content{
+        justify-content: space-between;
+    }
+
+    .width {
+        font-size: 12px !important;
+    }
+
     .thumbnail {
-        width: 75px;
+        width: 90px;
     }
 
     .infos p {
-        font-size: 15px;
+        font-size: 12px;
+    }
+
+    button { 
+        font-size: 12px;
+        padding: 6px;
     }
 }
 
-@media screen and (max-width: 375px) and (min-width: 361px) {
+/* @media screen and (max-width: 375px) and (min-width: 361px) {
     .thumbnail {
         width: 75px;
     }
@@ -225,4 +287,4 @@ button {
     button {
         font-size: 10px;
     }
-}
+} */
