@@ -94,7 +94,7 @@ const valorInput = (event) => {
                 <strong className="title" data-testid="header-title">PAY CARD</strong>
             </div>
         </div>
-            <section data-testid="section">
+            <section className="grid-section" data-testid="section">
 
             {infos.map(item => (
                 <div className="container" key={item.index} data-testid="custom-element">

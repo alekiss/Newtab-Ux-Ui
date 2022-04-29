@@ -38,15 +38,20 @@ body {
     padding: 19px;
 }
 
+.grid-section { 
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
 .container {
     background-color: #EC0000;
     display: flex;
     justify-content: center;
     margin: auto;
-    margin-top: 0.6rem;
+    margin-top: 2rem;
     align-items: center;
     padding: 1.25rem;
-    width: 700px;
+    width: 85%;
     max-width: 700px;
     height: 200px;
     border-radius: 5px 0px;
@@ -211,6 +216,17 @@ button {
 }
 
 /* Media Queries */
+
+@media screen and (max-width: 912px){
+    .grid-section{ 
+        display: block;
+    }
+
+    .container{
+        max-width: 680px;
+        margin-top: 0.6rem;
+    }
+}
 
 @media screen and (max-width: 768px){
     .container{
