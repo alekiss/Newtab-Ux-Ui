@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "211125ec0f50935bc9e0767bab8252e7",
+    "revision": "cc2c4a403b8ddb63ec940faa9f8e2b06",
     "url": "/Newtab-Ux-Ui/index.html"
   },
   {
-    "revision": "c0a3e525c82e670101db",
-    "url": "/Newtab-Ux-Ui/static/css/main.2b2288df.chunk.css"
+    "revision": "e5af1735d745c68d8ff3",
+    "url": "/Newtab-Ux-Ui/static/css/main.fb453b68.chunk.css"
   },
   {
     "revision": "22309e31a8b85475c813",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Newtab-Ux-Ui/static/js/2.07696948.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "c0a3e525c82e670101db",
-    "url": "/Newtab-Ux-Ui/static/js/main.66553cce.chunk.js"
+    "revision": "e5af1735d745c68d8ff3",
+    "url": "/Newtab-Ux-Ui/static/js/main.67f361e2.chunk.js"
   },
   {
     "revision": "1e63d6494976c5ffb6e3",
